@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 407976377}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,12 +147,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 407976376}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9324536, z: -0, w: 0.3612899}
-  m_LocalPosition: {x: -0.8512932, y: 3.8352897, z: -3.7382228}
-  m_LocalScale: {x: 92.284904, y: 93.858116, z: 93.85814}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0049900007, z: -0.005360001}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 3520432414782569546}
+  m_Father: {fileID: 6662761952573393641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &631768965
 GameObject:
@@ -163,7 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 631768966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SakeCups
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,6 +187,114 @@ Transform:
   - {fileID: 543450653604325789}
   - {fileID: 543450651800137784}
   - {fileID: 543450652124777670}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &636796167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 636796171}
+  - component: {fileID: 636796170}
+  - component: {fileID: 636796169}
+  - component: {fileID: 636796168}
+  m_Layer: 3
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!136 &636796168
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636796167}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &636796169
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636796167}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &636796170
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636796167}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &636796171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636796167}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.07, y: 2.56, z: -7.34}
+  m_LocalScale: {x: 1.8132, y: 2.2757473, z: 1.8132}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1014157713}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
@@ -337,8 +446,8 @@ GameObject:
   - component: {fileID: 924416439}
   - component: {fileID: 924416438}
   - component: {fileID: 924416437}
-  m_Layer: 0
-  m_Name: Cube
+  m_Layer: 6
+  m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -468,7 +577,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -522,7 +631,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1015
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -542,14 +651,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35667372, y: -0.41304493, z: 0.18001202, w: 0.8183968}
-  m_LocalPosition: {x: 3.5603054, y: 8.393208, z: -5.635355}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.1790895, y: -0.44140798, z: 0.09038527, w: 0.87459505}
+  m_LocalPosition: {x: -0.17, y: 0.075, z: -0.18}
+  m_LocalScale: {x: 0.55151117, y: 0.49320376, z: 0.48511007}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1051728911
+  m_Father: {fileID: 1014157713}
+  m_LocalEulerAnglesHint: {x: 23.145, y: -53.56, z: 0}
+--- !u!1 &1014157712
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -557,28 +666,29 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1051728912}
-  m_Layer: 0
-  m_Name: TableAndContents
+  - component: {fileID: 1014157713}
+  m_Layer: 3
+  m_Name: CamStand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1051728912
+--- !u!4 &1014157713
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1051728911}
+  m_GameObject: {fileID: 1014157712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.20917, y: 2.77, z: -1.31769}
-  m_LocalScale: {x: 93.858116, y: 93.858116, z: 93.858116}
+  m_LocalPosition: {x: 0, y: 1.218, z: 0.402}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 963194228}
+  m_Father: {fileID: 636796171}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1379901102
 BoxCollider:
@@ -940,7 +1050,7 @@ GameObject:
   - component: {fileID: 6778116746935968882}
   - component: {fileID: 1812956638516580631}
   - component: {fileID: 196849908396731235}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: label1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1047,7 +1157,7 @@ GameObject:
   - component: {fileID: 1711813854811360087}
   - component: {fileID: 1933383640}
   - component: {fileID: 1933383639}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SakeCup (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1067,7 +1177,7 @@ GameObject:
   - component: {fileID: 1711813854461556649}
   - component: {fileID: 1583835954}
   - component: {fileID: 1583835953}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SakeCup (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1087,7 +1197,7 @@ GameObject:
   - component: {fileID: 1711813855674749682}
   - component: {fileID: 1885994682}
   - component: {fileID: 1885994681}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SakeCup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1107,7 +1217,7 @@ GameObject:
   - component: {fileID: 3887578129204623974}
   - component: {fileID: 8543298220172461540}
   - component: {fileID: 8543298220172461539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BittenFruitCore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1170,7 +1280,7 @@ GameObject:
   - component: {fileID: 4630711602976953025}
   - component: {fileID: 7934284879297479427}
   - component: {fileID: 7934284879297479428}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GomuGomuNoMi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1464,7 +1574,7 @@ GameObject:
   - component: {fileID: 2427012277719558703}
   - component: {fileID: 4605444571460985137}
   - component: {fileID: 1379901102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tableTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1526,7 +1636,7 @@ GameObject:
   - component: {fileID: 6266097527511553398}
   - component: {fileID: 4186769803541204911}
   - component: {fileID: 780461294}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tableLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1550,7 +1660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 798233698540864537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: curve1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1599,7 +1709,7 @@ GameObject:
   - component: {fileID: 355233266377155533}
   - component: {fileID: 4442718367558972580}
   - component: {fileID: 2013375610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tableLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1653,13 +1763,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6978831114468261500}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.32155246, y: -0.42513958, z: -0.8298952, w: -0.16472521}
-  m_LocalPosition: {x: -0.8271994, y: 3.8399827, z: -3.7529683}
-  m_LocalScale: {x: 93.85817, y: 93.858154, z: 91.78148}
+  m_LocalRotation: {x: 0.68853456, y: -0.000000059604645, z: 0.000000029802322, w: -0.7252036}
+  m_LocalPosition: {x: -0.00008526651, y: 0.000050001312, z: 0.00028905086}
+  m_LocalScale: {x: 1.0170482, y: 1, z: 0.97787446}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 234.25, y: 0, z: 0}
+  m_Father: {fileID: 407976377}
+  m_LocalEulerAnglesHint: {x: 272.972, y: 0, z: 0}
 --- !u!1 &3727517304240010723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,7 +1781,7 @@ GameObject:
   - component: {fileID: 5196512199555522076}
   - component: {fileID: 4318696995216389377}
   - component: {fileID: 195593630454385722}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1840,7 +1950,7 @@ GameObject:
   - component: {fileID: 9201380924748002012}
   - component: {fileID: 8542529636764169067}
   - component: {fileID: 8700992464702215951}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: keyHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2168,7 +2278,7 @@ GameObject:
   - component: {fileID: 4173955685527649699}
   - component: {fileID: 101643037248371824}
   - component: {fileID: 3756775696810328277}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: stemCurve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2186,7 +2296,7 @@ GameObject:
   - component: {fileID: 4089554129333035687}
   - component: {fileID: 19358590694122356}
   - component: {fileID: 3823383268742078417}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: stemCurve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2207,6 +2317,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9201380924748002012}
+  - {fileID: 407976377}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6778116746935968882
@@ -2235,7 +2346,7 @@ GameObject:
   - component: {fileID: 3520432414782569546}
   - component: {fileID: 9165009519756901633}
   - component: {fileID: 2230359800713438878}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: chestTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2255,7 +2366,7 @@ GameObject:
   - component: {fileID: 9176788848502387485}
   - component: {fileID: 9176788848502387487}
   - component: {fileID: 9176788848502387486}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SakeBottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2273,7 +2384,7 @@ GameObject:
   - component: {fileID: 4783057148890726974}
   - component: {fileID: 9187138541230613993}
   - component: {fileID: 1893194070488571505}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2291,7 +2402,7 @@ GameObject:
   - component: {fileID: 4849541609886195002}
   - component: {fileID: 9102505571392797421}
   - component: {fileID: 1974868831153193333}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Stem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2317,7 +2428,7 @@ GameObject:
   - component: {fileID: 1975762591814951911}
   - component: {fileID: 8721701559348492894}
   - component: {fileID: 2017043358381677989}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: label2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2333,7 +2444,7 @@ Transform:
   m_GameObject: {fileID: 1668827066551425147}
   serializedVersion: 2
   m_LocalRotation: {x: 0.26415893, y: 0.27216128, z: 0.48221472, w: 0.78969437}
-  m_LocalPosition: {x: -0.504, y: 3.6, z: -4.108}
+  m_LocalPosition: {x: -0.538, y: 3.402, z: -4.113}
   m_LocalScale: {x: 40, y: 40, z: 40}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2427,7 +2538,7 @@ GameObject:
   - component: {fileID: 8053892367724356949}
   - component: {fileID: 4914135879517397276}
   - component: {fileID: 882494104}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tableLeg3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2569,7 +2680,7 @@ GameObject:
   - component: {fileID: 5250264867106938513}
   - component: {fileID: 1090386132737654481}
   - component: {fileID: 8832987843414905375}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: chestBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2624,7 +2735,7 @@ GameObject:
   - component: {fileID: 4706398213577625594}
   - component: {fileID: 193142273771490621}
   - component: {fileID: 1449502486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: tableLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2766,15 +2877,12 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 963194228}
   - {fileID: 705507995}
-  - {fileID: 1051728912}
   - {fileID: 752000040830486681}
   - {fileID: 6662761952573393641}
-  - {fileID: 407976377}
-  - {fileID: 3520432414782569546}
   - {fileID: 8003367175687489650}
   - {fileID: 631768966}
   - {fileID: 924416441}
   - {fileID: 7934284879297479426}
   - {fileID: 8543298220172461538}
+  - {fileID: 636796171}
