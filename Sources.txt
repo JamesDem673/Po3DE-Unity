@@ -1,0 +1,19 @@
+3D Asset Materials
+
+Chest:
+Gold Trim - ambientCG.com/a/Metal035
+Wood - ambientCG.com/a/Planks019
+
+Fruit:
+Stem - ambientCG.com/a/Bark005
+Fruit Bump Map - ambientCG.com/a/Rubber004
+Inside - ambientCG.com/a/Ground068
+
+Sake Cup:
+Porcelain - ambientCG.com/a/Porcelain001
+
+Table:
+Wood - ambientCG.com/a/PaintedWood008C
+
+Floor:
+Wood - ambientCG.com/a/Planks037B
