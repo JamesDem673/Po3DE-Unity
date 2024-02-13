@@ -348,8 +348,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.0049900007, z: -0.005360001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3520432414782569546}
+  m_Children: []
   m_Father: {fileID: 6662761952573393641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575709698
@@ -474,7 +473,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -109.17656, y: 0, z: -110.23434, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -498,7 +497,7 @@ GameObject:
   m_Component:
   - component: {fileID: 631768966}
   m_Layer: 7
-  m_Name: SakeCups
+  m_Name: Sake Cups
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1197,6 +1196,7 @@ GameObject:
   - component: {fileID: 1636455186}
   - component: {fileID: 1636455187}
   - component: {fileID: 1636455188}
+  - component: {fileID: 1636455189}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1272,6 +1272,23 @@ MonoBehaviour:
   jumpCooldown: 0.25
   airMultiplier: 0.4
   jumpKey: 32
+--- !u!114 &1636455189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636455185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6e116f91018f442b3fef653c7fe2e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemLookedAt: {fileID: 575709700}
+  fruit: {fileID: 1668827066551425147}
+  chest: {fileID: 6978831114468261500}
+  SakeCups: {fileID: 631768965}
+  SakeBottle: {fileID: 7231229206039859912}
 --- !u!1 &1794544509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,7 +1820,7 @@ GameObject:
   - component: {fileID: 1933383640}
   - component: {fileID: 1933383639}
   m_Layer: 7
-  m_Name: SakeCup
+  m_Name: Sake Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1823,7 +1840,7 @@ GameObject:
   - component: {fileID: 1583835954}
   - component: {fileID: 1583835953}
   m_Layer: 7
-  m_Name: SakeCup
+  m_Name: Sake Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1843,7 +1860,7 @@ GameObject:
   - component: {fileID: 1885994682}
   - component: {fileID: 1885994681}
   m_Layer: 7
-  m_Name: SakeCup
+  m_Name: Sake Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1925,8 +1942,9 @@ GameObject:
   - component: {fileID: 4630711602976953025}
   - component: {fileID: 7934284879297479427}
   - component: {fileID: 7934284879297479428}
+  - component: {fileID: 7934284879297479429}
   m_Layer: 7
-  m_Name: GomuGomuNoMi
+  m_Name: Gomu Gomu No Mi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2408,13 +2426,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6978831114468261500}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.68853456, y: -0.000000059604645, z: 0.000000029802322, w: -0.7252036}
-  m_LocalPosition: {x: -0.00008526651, y: 0.000050001312, z: 0.00028905086}
-  m_LocalScale: {x: 1.0170482, y: 1, z: 0.97787446}
+  m_LocalRotation: {x: 0, y: -0.93245316, z: -0, w: -0.36129096}
+  m_LocalPosition: {x: -0.84486717, y: 3.783045, z: -3.803}
+  m_LocalScale: {x: 93.858215, y: 93.85817, z: 91.78148}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 407976377}
-  m_LocalEulerAnglesHint: {x: 272.972, y: 0, z: 0}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 360, y: 137.641, z: 0}
 --- !u!1 &3727517304240010723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2595,7 +2613,7 @@ GameObject:
   - component: {fileID: 9201380924748002012}
   - component: {fileID: 8542529636764169067}
   - component: {fileID: 8700992464702215951}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: keyHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2991,8 +3009,10 @@ GameObject:
   - component: {fileID: 3520432414782569546}
   - component: {fileID: 9165009519756901633}
   - component: {fileID: 2230359800713438878}
-  m_Layer: 9
-  m_Name: chestTop
+  - component: {fileID: 9165009519756901634}
+  - component: {fileID: 9165009519756901635}
+  m_Layer: 7
+  m_Name: Chest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3012,7 +3032,7 @@ GameObject:
   - component: {fileID: 9176788848502387487}
   - component: {fileID: 9176788848502387486}
   m_Layer: 7
-  m_Name: SakeBottle
+  m_Name: Sake Bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3145,6 +3165,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.009976556
   m_Center: {x: -0.000005898065, y: -0.000021548003, z: -0.00008411193}
+--- !u!114 &7934284879297479429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668827066551425147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d1f8e7b8b7c214e83b0e01070323b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WholeFruit: {fileID: 1668827066551425147}
+  BittenFruit: {fileID: 939993398260874384}
 --- !u!4 &8003367175687489650
 Transform:
   m_ObjectHideFlags: 0
@@ -3325,7 +3359,7 @@ GameObject:
   - component: {fileID: 5250264867106938513}
   - component: {fileID: 1090386132737654481}
   - component: {fileID: 8832987843414905375}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: ChestBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3402,6 +3436,40 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6978831114468261500}
+  m_Mesh: {fileID: 8366315689876258421, guid: f9873cee54ccd3b4482e0894c0a5c66b, type: 3}
+--- !u!114 &9165009519756901634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6978831114468261500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4712a9d651072c24f870cf7769a06646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!64 &9165009519756901635
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6978831114468261500}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 8366315689876258421, guid: f9873cee54ccd3b4482e0894c0a5c66b, type: 3}
 --- !u!23 &9176788848502387485
 MeshRenderer:
@@ -3526,6 +3594,7 @@ SceneRoots:
   - {fileID: 924416441}
   - {fileID: 752000040830486681}
   - {fileID: 6662761952573393641}
+  - {fileID: 3520432414782569546}
   - {fileID: 8003367175687489650}
   - {fileID: 631768966}
   - {fileID: 7934284879297479426}
