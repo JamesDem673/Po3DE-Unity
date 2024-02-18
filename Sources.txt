@@ -17,3 +17,7 @@ Wood - ambientCG.com/a/PaintedWood008C
 
 Floor:
 Wood - ambientCG.com/a/Planks037B
+
+Island:
+Grass - ambientCG.com/a/Grass002
+Sand - ambientCG.com/a/Ground054
