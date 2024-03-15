@@ -7,7 +7,7 @@ using static UnityEngine.Tilemaps.Tilemap;
 
 public class ChestInteraction : MonoBehaviour
 {
-    [Header("Rotation States")]
+    public Animator chestAnimator;
     bool closed;
 
     public void Start()
@@ -20,12 +20,16 @@ public class ChestInteraction : MonoBehaviour
         //Starts relevant opening/closing animation
         if (closed)
         {
-            transform.Rotate(-140, 0, 0, Space.Self);
+            chestAnimator.ResetTrigger("Close");
+            chestAnimator.SetTrigger("Open");
+            transform.Rotate(-120, 0, 0, Space.Self);
             closed = false;
         }
         else if (!closed)
         {
-            transform.Rotate(140, 0, 0, Space.Self);
+            chestAnimator.ResetTrigger("Open");
+            chestAnimator.SetTrigger("Close");
+            transform.Rotate(120, 0, 0, Space.Self);
             closed = true;
         }
     }
