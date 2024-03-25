@@ -4,6 +4,9 @@ Chest:
 Gold Trim - ambientCG.com/a/Metal035
 Wood - ambientCG.com/a/Planks019
 
+Key:
+Metal - ambientCG.com/a/Metal046B
+
 Fruit:
 Stem - ambientCG.com/a/Bark005
 Fruit Bump Map - ambientCG.com/a/Rubber004

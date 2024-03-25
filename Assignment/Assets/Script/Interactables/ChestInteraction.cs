@@ -9,16 +9,18 @@ public class ChestInteraction : MonoBehaviour
 {
     public Animator chestAnimator;
     bool closed;
+    bool locked;
 
     public void Start()
     {
         //Gets animator for object and sets default variable state
         closed = true;
+        locked = true;
     }
     public void Interact()
     {
         //Starts relevant opening/closing animation
-        if (closed)
+        if (closed && !locked)
         {
             chestAnimator.ResetTrigger("Close");
             chestAnimator.SetTrigger("Open");
@@ -32,5 +34,10 @@ public class ChestInteraction : MonoBehaviour
             transform.Rotate(120, 0, 0, Space.Self);
             closed = true;
         }
+    }
+
+    public void UnlockChest()
+    {
+        locked = false;
     }
 }

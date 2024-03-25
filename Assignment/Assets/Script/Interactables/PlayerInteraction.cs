@@ -14,7 +14,7 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject SakeCup2;
     public GameObject SakeCup3;    
     public GameObject SakeBottle;
-
+    public GameObject key;
 
     private void Update()
     {
@@ -59,6 +59,13 @@ public class PlayerInteraction : MonoBehaviour
                     {
                         //function to open/close chest
                         chest.GetComponent<ChestInteraction>().Interact();
+                        break;
+                    }
+                case ("Key"):
+                    {
+                        //Unlocks Chest
+                        chest.GetComponent<ChestInteraction>().UnlockChest();
+                        key.gameObject.SetActive(false);
                         break;
                     }
             }
