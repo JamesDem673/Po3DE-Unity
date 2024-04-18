@@ -9,6 +9,6 @@ public class MoveCamera : MonoBehaviour
     private void Update()
     {
         //Moves camera position to the player's position
-        transform.position = cameraPosition.position;
+        cameraPosition.position = transform.position;
     }
 }

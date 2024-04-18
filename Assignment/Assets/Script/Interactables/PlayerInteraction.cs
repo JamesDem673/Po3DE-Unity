@@ -14,7 +14,6 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject SakeCup2;
     public GameObject SakeCup3;    
     public GameObject SakeBottle;
-    public GameObject key;
 
     private void Update()
     {
@@ -65,8 +64,14 @@ public class PlayerInteraction : MonoBehaviour
                     {
                         //Unlocks Chest
                         chest.GetComponent<ChestInteraction>().UnlockChest();
-                        key.gameObject.SetActive(false);
+                        GameObject key = GameObject.FindWithTag("Key");
+                        key.SetActive(false);
                         break;
+                    }
+                case ("Sign"):
+                    {
+                        //sets UI active for the sign
+                        break;   
                     }
             }
         }
