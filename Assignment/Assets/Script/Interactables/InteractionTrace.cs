@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InteractionTrace : MonoBehaviour
 {
-    public float interactionDistance = 3f;
+    public float interactionDistance = 5f;
     public GameObject background;
     public TMP_Text itemDisplay;
 

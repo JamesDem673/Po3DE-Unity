@@ -14,6 +14,7 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject SakeCup2;
     public GameObject SakeCup3;    
     public GameObject SakeBottle;
+    public GameObject Sign;
 
     private void Update()
     {
@@ -71,6 +72,7 @@ public class PlayerInteraction : MonoBehaviour
                 case ("Sign"):
                     {
                         //sets UI active for the sign
+                        Sign.GetComponent<SignText>().ReadSign();
                         break;   
                     }
             }
