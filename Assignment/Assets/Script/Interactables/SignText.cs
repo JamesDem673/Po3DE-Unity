@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class SignText : MonoBehaviour
 {
-    List<string> TextLines = new List<string>();
     int Textline = 0;
 
     public GameObject background;
@@ -15,22 +14,33 @@ public class SignText : MonoBehaviour
     {
         background.SetActive(false);
 
-        TextLines.Add("In order to get open the chest, you must first find the key");
-        TextLines.Add("The key was hidden on one of the islands surrounding you, but sadly I don't know which one");
+        for (int i = 0; i < background.transform.childCount; i++) 
+        {
+            background.transform.GetChild(i).gameObject.SetActive(false);
+        }
+    }
+
+    private void Update()
+    {
+        //checks for input from player and what object is being looked it, and activates function for interaction
+        if (Input.GetKeyDown(KeyCode.E) && background.activeSelf == true)
+        {
+            StopReadingSign();
+        }
     }
 
     public void ReadSign()
     {
         background.SetActive(true);
-
-        signDisplay.SetText(TextLines[Textline]);
+        background.transform.GetChild(Textline).gameObject.SetActive(true);
     }
     
     public void StopReadingSign()
     {
+        background.transform.GetChild(Textline).gameObject.SetActive(false);
         background.SetActive(false);
 
-        if (Textline + 1 <= TextLines.Count)
+        if (Textline + 1 <= background.transform.childCount)
         {
             Textline += 1;
         }
