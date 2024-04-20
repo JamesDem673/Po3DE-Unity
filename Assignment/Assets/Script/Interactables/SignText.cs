@@ -6,13 +6,17 @@ using UnityEngine;
 public class SignText : MonoBehaviour
 {
     int Textline = 0;
+    bool hasKey = false;
 
     public GameObject background;
     public TMP_Text signDisplay;
+    public GameObject arrow;
+    public GameObject key;
 
     void Start()
     {
         background.SetActive(false);
+        arrow.SetActive(false);
 
         for (int i = 0; i < background.transform.childCount; i++) 
         {
@@ -27,12 +31,22 @@ public class SignText : MonoBehaviour
         {
             StopReadingSign();
         }
+
+        if (key.activeSelf == false) 
+        {
+            hasKey = true;
+        }
     }
 
     public void ReadSign()
     {
         background.SetActive(true);
         background.transform.GetChild(Textline).gameObject.SetActive(true);
+
+        if (Textline == 20)
+        {
+            arrow.SetActive(true);
+        }
     }
     
     public void StopReadingSign()
@@ -40,9 +54,12 @@ public class SignText : MonoBehaviour
         background.transform.GetChild(Textline).gameObject.SetActive(false);
         background.SetActive(false);
 
-        if (Textline + 1 <= background.transform.childCount)
+        if (hasKey || Textline <= 20)
         {
-            Textline += 1;
+            if (Textline + 1 <= background.transform.childCount)
+            {
+                Textline += 1;
+            }
         }
     }
 }
