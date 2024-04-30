@@ -12,7 +12,7 @@ public class KeySpawn : MonoBehaviour
     public GameObject arrow;
     void Start()
     {
-        int randomNum = Random.Range(0, transform.childCount);
+        int randomNum = Random.Range(0, transform.childCount - 1);
         Quaternion keyRot = new Quaternion(45, 45, 45, 45);
         key.transform.SetPositionAndRotation(transform.GetChild(randomNum).transform.position, keyRot);
         key.transform.SetParent(transform.GetChild(randomNum));

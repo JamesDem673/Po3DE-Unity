@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class InteractionTrace : MonoBehaviour
 {
-    public float interactionDistance = 5f;
+    public float interactionDistance = 15f;
     public GameObject background;
     public TMP_Text itemDisplay;
 
@@ -18,7 +18,7 @@ public class InteractionTrace : MonoBehaviour
         //checks if raycast hits an object
         if (Physics.Raycast(transform.position, transform.forward, out hit, interactionDistance))
         {
-            if (hit.collider.gameObject.layer == 7)
+            if (hit.collider.gameObject.layer == 7 || hit.collider.gameObject.layer == 9)
             {
                 //shows UI and sets text variable to object casted
                 background.SetActive(true);

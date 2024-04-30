@@ -10,11 +10,14 @@ public class PlayerMovement : MonoBehaviour
     float horizontalInput;
     float verticalInput;
     Vector3 moveDirection;
+    bool inBoat;
+    float rotationInput;
 
     [Header("Ground Check")]
     public float groundDrag;
     public float playerHeight;
     public LayerMask groundCheck;
+    public LayerMask boatCheck;
     bool grounded;
 
     [Header("Jumping")]
@@ -35,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
+        inBoat = false;
+
         //lets player jump
         readyToJump = true;
     }
@@ -43,6 +48,12 @@ public class PlayerMovement : MonoBehaviour
     {
         //Ground Checks
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundCheck);
+
+        if (!grounded)
+        {
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, boatCheck);
+
+        }
 
         //Checks for player inputs each frame
         InputChecks();
@@ -58,19 +69,26 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.drag = 0;
         }
-    }
 
-    private void FixedUpdate()
-    {
         //Moves player
         MovePlayer();
     }
-
+                                                                                                                                              
     private void InputChecks()
     {
-        //Get players keyboard inputs
-        horizontalInput = Input.GetAxisRaw("Horizontal");
+        //Get players keyboard inputs       
         verticalInput = Input.GetAxisRaw("Vertical");
+
+        if(inBoat)
+        {
+            horizontalInput = 0.0f;
+            rotationInput = Input.GetAxisRaw("Horizontal");
+        }
+        else
+        {
+            rotationInput = 0.0f;
+            horizontalInput = Input.GetAxisRaw("Horizontal");
+        }
 
         //Checks and executes jumps
         if(Input.GetKey(jumpKey) && readyToJump && grounded)
@@ -97,6 +115,10 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(moveDirection.normalized * moveSpeed * 10F * airMultiplier, ForceMode.Force);
         }
 
+        if(inBoat)
+        {
+            transform.Rotate(new Vector3(0, rotationInput / 2, 0), Space.Self);
+        }
     }
 
     private void SpeedControl()
@@ -125,5 +147,10 @@ public class PlayerMovement : MonoBehaviour
     {
         //Removes restriction blocking jumping
         readyToJump = true;
+    }
+
+    public void SetInBoat(bool state)
+    {
+        inBoat = state;
     }
 }

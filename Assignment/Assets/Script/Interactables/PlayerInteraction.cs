@@ -15,12 +15,23 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject SakeCup3;    
     public GameObject SakeBottle;
     public GameObject Sign;
+    public GameObject Boat;
+
+    bool inBoat = false;
 
     private void Update()
     {
         //checks for input from player and what object is being looked it, and activates function for interaction
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if (inBoat)
+            {
+                Boat.transform.parent = null;
+                inBoat = false;
+                GetComponent<PlayerMovement>().SetInBoat(false);
+                transform.position += new Vector3(0, 2, 0);
+            }
+
             Debug.Log(itemLookedAt.text);
 
             switch (itemLookedAt.text)
@@ -74,6 +85,20 @@ public class PlayerInteraction : MonoBehaviour
                         //sets UI active for the sign
                         Sign.GetComponent<SignText>().ReadSign();
                         break;   
+                    }
+                case ("Boat"):
+                    {
+                        if (!inBoat)
+                        {
+                            //sets player to be in boat
+                            transform.position = Boat.transform.position += new Vector3(0, 2, 0);
+                            Boat.transform.SetParent(transform, true);
+                            GetComponent<PlayerMovement>().SetInBoat(true);
+
+                            Boat.SetActive(true);
+                            inBoat = true;                          
+                        }
+                        break;
                     }
             }
         }
